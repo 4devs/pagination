@@ -14,7 +14,7 @@ class QueryType extends AbstractType
     public function paginate($target, PaginationInterface $pagination, array $options)
     {
         /* @var Query $target */
-        $pagination->setItems($target->execute()->toArray());
+        $pagination->setItems(array_values($target->execute()->toArray()));
 
         return $pagination;
     }
