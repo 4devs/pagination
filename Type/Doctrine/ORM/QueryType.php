@@ -34,5 +34,4 @@ class QueryType extends PaginatorType
             ->addAllowedTypes('fetch_join', ['bool'])
             ->setDefault('fetch_join', false);
     }
-
 }

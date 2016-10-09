@@ -2,7 +2,6 @@
 
 namespace FDevs\Pagination\Extension\Doctrine\ORM;
 
-use Doctrine\ORM\Tools\Pagination\Paginator;
 use FDevs\Pagination\Extension\CountExtension as BaseExtension;
 use FDevs\Pagination\Model\CountPaginationInterface;
 use FDevs\Pagination\Model\PaginationInterface;

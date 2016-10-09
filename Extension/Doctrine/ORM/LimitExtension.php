@@ -1,4 +1,5 @@
 <?php
+
 namespace FDevs\Pagination\Extension\Doctrine\ORM;
 
 use Doctrine\ORM\Tools\Pagination\Paginator;

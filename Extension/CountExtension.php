@@ -2,7 +2,6 @@
 
 namespace FDevs\Pagination\Extension;
 
-
 use FDevs\Pagination\Model\CountPaginationInterface;
 use FDevs\Pagination\Model\PaginationInterface;
 
@@ -15,6 +14,4 @@ abstract class CountExtension extends AbstractExtension
     {
         return $pagination instanceof CountPaginationInterface;
     }
-
-
 }

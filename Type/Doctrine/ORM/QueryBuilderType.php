@@ -13,5 +13,4 @@ class QueryBuilderType extends QueryType
     {
         return $target instanceof QueryBuilder;
     }
-
 }

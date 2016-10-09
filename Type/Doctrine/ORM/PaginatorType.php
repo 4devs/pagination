@@ -2,7 +2,6 @@
 
 namespace FDevs\Pagination\Type\Doctrine\ORM;
 
-
 use Doctrine\ORM\Tools\Pagination\Paginator;
 use FDevs\Pagination\Model\PaginationInterface;
 use FDevs\Pagination\Type\AbstractType;
@@ -27,5 +26,4 @@ class PaginatorType extends AbstractType
     {
         return $target instanceof Paginator;
     }
-
 }
