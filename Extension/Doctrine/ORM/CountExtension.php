@@ -1,6 +1,6 @@
 <?php
 
-namespace FDevs\Pagination\Extension\ArrayType;
+namespace FDevs\Pagination\Extension\Doctrine\ORM;
 
 use FDevs\Pagination\Extension\CountExtension as BaseExtension;
 use FDevs\Pagination\Model\CountPaginationInterface;
@@ -14,7 +14,7 @@ class CountExtension extends BaseExtension
     public function prepareTarget($target, array $options, PaginationInterface $pagination)
     {
         /* @var $pagination CountPaginationInterface */
-        $pagination->setCount(count($target));
+        $pagination->setCount($target->count());
 
         return $target;
     }

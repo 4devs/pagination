@@ -27,13 +27,21 @@ class Paginator implements PaginatorInterface
     private $typeExtension = [];
 
     /**
+     * @var string
+     */
+    private $paginationClass;
+
+    /**
      * Paginator constructor.
      *
      * @param array|PaginateInterface[] $typeList
+     * @param ExtensionRegistry|null    $extensionRegistry
+     * @param $paginationClass
      */
-    public function __construct(array $typeList = [], ExtensionRegistry $extensionRegistry = null)
+    public function __construct(array $typeList = [], ExtensionRegistry $extensionRegistry = null, $paginationClass = Pagination::class)
     {
         $this->extensionRegistry = $extensionRegistry ?: new ExtensionRegistry();
+        $this->paginationClass = $paginationClass;
         foreach ($typeList as $type) {
             $this->addType($type);
         }
@@ -44,7 +52,7 @@ class Paginator implements PaginatorInterface
      */
     public function paginate($target, array $options = [], PaginationInterface $pagination = null)
     {
-        $pagination = $pagination ?: new Pagination();
+        $pagination = $pagination ?: new $this->paginationClass();
         $paginator = $this->getType($target);
 
         $resolver = new OptionsResolver();

@@ -6,7 +6,7 @@ use FDevs\Pagination\Model\OffsetPaginationInterface;
 use FDevs\Pagination\Model\PaginationInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-abstract class OffsetExtension  extends AbstractExtension
+abstract class OffsetExtension extends AbstractExtension
 {
     /**
      * {@inheritdoc}
